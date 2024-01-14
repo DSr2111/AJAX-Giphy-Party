@@ -45,3 +45,19 @@ span {
 #formContainer {
   text-align: center;
 }
+
+ul {
+  margin-left: 115px;
+  margin-top: 60px;
+}
+
+ul li {
+  display: inline-block;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+img {
+  max-width: 300px;
+}

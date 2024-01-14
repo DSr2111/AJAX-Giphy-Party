@@ -10,14 +10,17 @@ async function getGif(searchTerm) {
   console.log(res);
   console.log(res.data.data.url);
   let newLI = document.createElement("li");
-  newLI.innerHTML = `<li><img src=${res.data.data.url} alt="${searchTerm} GIF"></li>`;
+  newLI.innerHTML = `<img class="gifs" src=${res.data.data.images.original.url} alt="${searchTerm} GIF">`;
   ul.append(newLI);
   input.value = "";
 }
 
 function addGif() {} //appending gifs to UL
 
-function removeGifs() {} //removing all gifs in UL
+function removeGifs() {
+  //removing all gifs in UL
+  ul.innerHTML = "";
+}
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
