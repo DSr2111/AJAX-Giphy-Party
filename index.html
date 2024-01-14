@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>GIPHY PARTY</title>
   </head>
   <body>
+    <div id="titleHeader">
+      <h1>GIPHY PARTY</h1>
+    </div>
     <div id="formContainer">
       <form action="">
         <label for="gifSearch"></label>
-        <input id="gifSearch" type="text" />
+        <input id="gifSearch" type="text" placeholder="Enter a search term" />
         <label for="submitSearch"></label>
-        <button type="submit">Search Giphy</button>
+        <button type="submit"><span>Search Giphy!</span></button>
         <label for="remove-btn"></label>
-        <button id="remove-btn">Remove Images</button>
+        <button id="remove-btn"><span>Remove Images</span></button>
       </form>
     </div>
     <ul></ul>

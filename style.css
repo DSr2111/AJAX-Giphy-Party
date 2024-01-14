@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+}
+
+#titleHeader {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
+
+#remove-btn {
+  background-color: red;
+}
+
+span {
+  color: white;
+}
+#formContainer {
+  text-align: center;
+}
