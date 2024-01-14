@@ -1,18 +1,23 @@
+const remove = document.getElementById("remove-btn");
+const form = document.getElementById("searchForm");
+const input = document.getElementById("gifSearch");
+const ul = document.getElementById("gifList");
+
 async function getGif(searchTerm) {
   //ajax function to search GIPHY API
-
-  const res = await axios.get("api.giphy.com/v1/gifs/search", {
-    params: { searchTerm },
-  });
+  const url = `https://api.giphy.com/v1/gifs/random?api_key=07ynKbEJm48vdxl0BPiyB1hFyXjstKn8&tag=${searchTerm}&rating=pg`;
+  const res = await axios.get(url);
+  console.log(res);
+  console.log(res.data.data.url);
+  let newLI = document.createElement("li");
+  newLI.innerHTML = `<li><img src=${res.data.data.url} alt="${searchTerm} GIF"></li>`;
+  ul.append(newLI);
+  input.value = "";
 }
 
 function addGif() {} //appending gifs to UL
 
 function removeGifs() {} //removing all gifs in UL
-
-const remove = document.getElementById("remove-btn");
-const form = document.getElementById("searchForm");
-const input = document.getElementById("gifSearch");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
